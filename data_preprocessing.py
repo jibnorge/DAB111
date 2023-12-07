@@ -21,3 +21,18 @@ data.drop(columns = 'availability', inplace = True)
 data['available_count'] = data['available_count'].astype('int')
 
 data.to_csv('books_updated.csv', index = False)
+
+features = pd.DataFrame({"Features" : data.columns})
+
+features['Description'] = ["The title of the book", 
+                        "The genre to which the book belongs", 
+                        "A unique identifier for the book", 
+                        "Type of the product", 
+                        "The price of the book excluding any taxes", 
+                        "The total price of the book, including taxes", 
+                        "The amount of tax applied to the book", 
+                        "The number of reviews the book has received", 
+                        "Indicates whether the book is in stock or not", 
+                        "The number of copies available in stock"]
+
+features.to_csv('features.csv', index = False)
