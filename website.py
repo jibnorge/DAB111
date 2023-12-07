@@ -40,5 +40,35 @@ def createMain():
 
     return render_template("index.html", book_data = book_data, table_name = table_name)
 
+@app.route('/about')
+def about():
+    conn = dbConnection()
+    table_names = get_table_names(conn)
+
+    if not table_names:
+        return "No tables found in the database."
+
+    table_name = table_names[1]
+
+    query = f'SELECT * FROM {table_name}'
+    feature_data = conn.execute(query).fetchall()
+
+    return render_template("about.html", feature_data = feature_data, table_name = table_name)
+
+@app.route('/non_fiction')
+def NonFiction():
+    # conn = dbConnection()
+    # table_names = get_table_names(conn)
+
+    # if not table_names:
+    #     return "No tables found in the database."
+
+    # table_name = table_names[1]
+
+    # query = f'SELECT * FROM {table_name}'
+    # feature_data = conn.execute(query).fetchall()
+
+    return render_template("non_fiction.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
