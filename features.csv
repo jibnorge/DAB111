@@ -1,0 +1,11 @@
+Features,Description
+title,The title of the book
+category,The genre to which the book belongs
+upc,A unique identifier for the book
+product_type,Type of the product
+price_excl,The price of the book excluding any taxes
+price_incl,"The total price of the book, including taxes"
+tax,The amount of tax applied to the book
+no_of_reviews,The number of reviews the book has received
+stock_availability,Indicates whether the book is in stock or not
+available_count,The number of copies available in stock
