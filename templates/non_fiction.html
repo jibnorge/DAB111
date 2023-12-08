@@ -21,11 +21,34 @@
             function redirectToAbout() {
                 window.location.href = '/about';
             }
-            function redirectToAll() {
-                window.location.href = '/';
+            function redirectToProducts() {
+                window.location.href = '/'
+            }
+            function redirectToNonFiction() {
+                window.location.href = '/non_fiction';
+            }
+            function redirectToSeqArt() {
+                window.location.href = '/seq_art';
+            }
+            function redirectToFiction() {
+                window.location.href = '/fiction';
+            }
+            function redirectToYoungAdult() {
+                window.location.href = '/young_adult';
+            }
+            function redirectToFantasy() {
+                window.location.href = '/fantasy';
+            }
+            function redirectToRomance() {
+                window.location.href = '/romance';
+            }
+            function redirectToMystery() {
+                window.location.href = '/mystery';
+            }
+            function redirectToFoodAndDrink() {
+                window.location.href = '/food_and_drink';
             }
         </script>
-
 
         <!-- Sidebar/menu -->
         <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
@@ -43,7 +66,7 @@
             </div>  
 
         </nav>
-
+        
         <!-- Overlay effect when opening sidebar on small screens -->
         <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
@@ -56,18 +79,18 @@
                 <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
                 <div class="w3-container">
                 <h1><b>BOOKS TABLE</b></h1>
-                        <div class="w3-section w3-bottombar w3-padding-16">
-                            <span class="w3-margin-right">Filter:</span> 
-                            <button class="w3-button w3-black">ALL</button>
-                            <button class="w3-button w3-white" onclick = "redirectToNonFiction()">Nonfiction</button>
-                            <button class="w3-button w3-white w3-hide-small">Sequential Art</button>
-                            <button class="w3-button w3-white w3-hide-small">Fiction</button>
-                            <button class="w3-button w3-white w3-hide-small">Young Adult</button>
-                            <button class="w3-button w3-white w3-hide-small">Fantasy</button>
-                            <button class="w3-button w3-white w3-hide-small">Romance</button>
-                            <button class="w3-button w3-white w3-hide-small">Mystery</button>
-                            <button class="w3-button w3-white w3-hide-small">Food and Drink</button>
-                        </div>
+                    <div class="w3-section w3-bottombar w3-padding-16">
+                        <span class="w3-margin-right">Filter:</span> 
+                        <button class="w3-button w3-white" onclick = "redirectToProducts()">ALL</button>
+                        <button class="w3-button w3-black" onclick = "redirectToNonFiction()">Nonfiction</button>
+                        <button class="w3-button w3-white" onclick = "redirectToSeqArt()">Sequential Art</button>
+                        <button class="w3-button w3-white" onclick = "redirectToFiction()">Fiction</button>
+                        <button class="w3-button w3-white" onclick = "redirectToYoungAdult()">Young Adult</button>
+                        <button class="w3-button w3-white" onclick = "redirectToFantasy()">Fantasy</button>
+                        <button class="w3-button w3-white" onclick = "redirectToRomance()">Romance</button>
+                        <button class="w3-button w3-white" onclick = "redirectToMystery()" >Mystery</button>
+                        <button class="w3-button w3-white" onclick = "redirectToFoodAndDrink()">Food and Drink</button>
+                    </div>
                 </div>
             </header>
         </div>
@@ -91,7 +114,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {%  for data in book_data %}
+                    {%  for data in nonfiction_data %}
                         <tr>
                             <td>{{ data['title'] }}</td>
                             <td>{{ data['category'] }}</td>
@@ -109,23 +132,6 @@
             </table>
             {% endblock %}
         </div>
-
-        <div class="w3-center w3-padding-32" style="margin-left: 200px">
-            <div class="w3-bar" style="margin-left: 200px">
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-                <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">5</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">6</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">7</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">8</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">9</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">10</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-            </div>
-    </div>
 
     </body>
 </html>
