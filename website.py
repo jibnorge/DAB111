@@ -22,7 +22,7 @@ def dbConnection():
         return None
 
 def get_table_names(conn):
-    cursor = conn.execute("SELECT name FROM sqlite_master WHERE type='table';")
+    cursor = conn.execute("SELECT name FROM sqlite_master WHERE type ='table';")
     return [table[0] for table in cursor.fetchall()]
 
 @app.route('/')
@@ -176,4 +176,4 @@ def FoodAndDrink():
     return render_template("food_and_drink.html", food_and_drink_data = food_and_drink_data, table_name = table_name)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug = True)
