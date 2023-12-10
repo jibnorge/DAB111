@@ -2,7 +2,7 @@
 
 ## Project description
 
-This Python script performs web scraping on the "Books to Scrape" website (https://books.toscrape.com/) to extract information about various books, including their names and prices. The python script utilizes the BeautifulSoup library for parsing HTML and the requests library for fetching the web page.
+This Python script performs web scraping on the "Books to Scrape" website (https://books.toscrape.com/) to extract information about various books, including their names and prices. The python script utilizes the BeautifulSoup library for parsing HTML and the requests library for fetching the web page. The coding is done in both .py and .ipynb formats.
 
 
 ## Data Collection
@@ -40,37 +40,43 @@ Flask is a lightweight Python web framework that provides useful tools and featu
     - book_data.csv
     - books_updated.csv
     - books.db
+    - data_collection.ipynb
     - data_collection.py
+    - data_preprocessing.ipynb
     - data_preprocessing.py
+    - database.ipynb
     - database.py
     - features.csv
     - README.md
     - requirements.txt
+    - website.ipynb
     - website.py
 ```
 
 ## Code Usage 
 
 1. Setting up the environment
+- Clone the repository 
 ```bash
-# Clone the repository
 git clone https://github.com/jibnorge/DAB111.git
 cd DAB111
+```
 
-# Create a virtual environment
-python -m venv venv
+- Create a virtual python environment in anaconda prompt
+```bash
+conda create --name venv python=3.9
+```
 
-# Activate the environment
-# On Windows
-venv\Scripts\activate
-# On macOS/Linux
-source venv/bin/activate
-
-# Install dependencies
+- Activate the environment and install requirements.txt
+```bash
+conda activate venv
 pip install -r requirements.txt
 ```
 
-
+- Run the web app or open jupyter notebook and run the **website.ipynb** file.
+```bash
+python website.py
+```
 
 
 ## Conclusion
