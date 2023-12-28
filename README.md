@@ -26,16 +26,7 @@ The Flask framework, along with the sqlalchemy package, was used to create a sim
 ```plaintext
 - WebScraper-FlaskDB
     - templates/
-        - about.html
-        - fantasy.html
-        - fiction.html
-        - food_and_drink.html
-        - index.html
-        - mystery.html
-        - non_fiction.html
-        - romance.html
-        - seq_art.html
-        - young_adult.html
+    - README.md
     - book_data.csv
     - books_updated.csv
     - books.db
