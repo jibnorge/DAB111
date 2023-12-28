@@ -24,7 +24,7 @@ The Flask framework, along with the sqlalchemy package, was used to create a sim
 ## Project Structure
 
 ```plaintext
-- DAB111
+- WebScraper-FlaskDB
     - templates/
         - about.html
         - fantasy.html
